@@ -30,7 +30,6 @@ while{!_spotFound} do {
 	};
 };
 _mg = "RHS_M2StaticMG_D" createVehicle _spot;
-player moveInGunner _mg;
 _mg setDir _angle;
 _mg setPosASL _spot;
 

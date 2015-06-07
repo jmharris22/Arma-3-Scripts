@@ -51,9 +51,6 @@ while{!_foundRoadPointInZone && _anyPointsInZone} do {
 		if(!([_theMarker, _rightPos] call BIS_fnc_inTrigger)) then {
 			_keepGoingRight = false;
 		};
-		_marker = createMarker [(str random 5757), _rightPos ];
-		_marker setMarkerType "mil_dot";
-		_marker setMarkerColor "ColorBlue";
 	};
 	
 	if(_keepGoingLeft) then {
@@ -69,8 +66,6 @@ while{!_foundRoadPointInZone && _anyPointsInZone} do {
 		if(!([_theMarker, _leftPos] call BIS_fnc_inTrigger)) then {
 			_keepGoingLeft = false;
 		};
-		_marker = createMarker [(str random 5757), _leftPos ];
-		_marker setMarkerType "mil_dot";
 	};
 	if(_keepGoingUp)then{
 		_upPos set[1, ((_upPos select 1) + _up)];
@@ -85,9 +80,6 @@ while{!_foundRoadPointInZone && _anyPointsInZone} do {
 		if(!([_theMarker, _upPos] call BIS_fnc_inTrigger)) then {
 			_keepGoingUp = false;
 		};
-		_marker = createMarker [(str random 5757), _upPos ];
-		_marker setMarkerType "mil_dot";
-		_marker setMarkerColor "ColorRed";
 	};
 	if(_keepGoingDown) then {
 		_downPos set[1, ((_downPos select 1) + _down)];
@@ -102,8 +94,6 @@ while{!_foundRoadPointInZone && _anyPointsInZone} do {
 		if(!([_theMarker, _downPos] call BIS_fnc_inTrigger)) then {
 			_keepGoingDown = false;
 		};
-		_marker = createMarker [(str random 5757), _downPos ];
-		_marker setMarkerType "mil_dot";
 	};
 	
 	if(!_keepGoingRight && !_keepGoingLeft && !_keepGoingUp && !_keepGoingDown) then {
